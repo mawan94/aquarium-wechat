@@ -1,0 +1,51 @@
+
+<view class='containte'>
+  <view class='top'>
+    <!-- <view bindtap='handleToOrigin'>
+      <text class='originRight'>连云港市</text>
+    </view> -->
+    <view class='search'>
+      <!-- <text class='icon-search' style='margin-left:16px;font-size:18px;'></text> -->
+      <input style="width:90%" placeholder="请输入收货地址" bindinput="getsuggest" value="{{backfill}}"></input>
+    </view>
+  </view>
+
+  <view class='notice'>因各地区商品可能存在差异，请选择准确收货地址</view>
+  <!--关键词输入提示列表渲染-->
+  <view style='background:white' wx:for="{{suggestion}}" wx:key="index">
+    <!--绑定回填事件-->
+    <view>
+      <!--根据需求渲染相应数据-->
+      <!--渲染地址title-->
+      <view style="font-size:14px; padding:5px ;color:#222" bindtap="backfill" id="{{index}}">
+        {{item.title}}
+        <!-- <image style='margin:0 8rpx;width:66rpx;height:40rpx' src='../../img/left.gif'></image> -->
+      </view>
+      <!--渲染详细地址-->
+      <view bindtap="backfill" id="{{index}}" style="font-size:14px;color:#999;padding-left:5px">{{item.addr}}</view>
+      <view class="divLine"></view>
+    </view>
+  </view>
+
+  <!-- <block wx:if="{{actionType != 1}}">
+    <view class='title'>当前地址</view>
+    <view class='content'>
+      <view bindtap='handleGetLocation'>{{currentAddr}}</view>
+      <view class='origin' bindtap='handleRefixedPosition'> 重新定位</view>
+    </view>
+    <block wx:if="{{customerAddress.length>0}}">
+      <view class='content-view'>
+        <view class='title'>我的地址</view>
+        <view class='content' wx:for="{{customerAddress}}" wx:key="index" bindtap='handleClickMyAddress' data-my-address='{{item}}'>
+          <view>{{item.address}}</view>
+        </view>
+      </view>
+    </block>
+    <view class='content-view'>
+      <view class='title'>附近地址</view>
+      <view class='content' wx:for="{{aroundAddress}}" wx:key="index" bindtap='handlerClickAroundAddress' data-address='{{item}}'>
+        <view>{{item.title}}</view>
+      </view>
+    </view>
+  </block> -->
+</view>

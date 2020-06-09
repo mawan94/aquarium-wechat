@@ -1,0 +1,38 @@
+<view class="container">
+    <view  wx:if="{{couponList.length == 0}}" class='content' >
+    <view class="blank"></view>
+    <!-- <view wx:for="{{couponList}}" bindtap='handleClickCoupon' data-coupon='{{item}}' class='null-content-title'> -->
+    <view wx:for="{{5}}" bindtap='handleClickCoupon' class='null-content-title'>
+      <view class="coupon-list">
+        <view class="item stamp stamp02 ">
+          <!-- 左侧 -->
+          <view class="float-li t1">
+            <view class="coupon-left">
+              <view class="t t1">￥</view>
+              <view class="t t2">10</view>
+              <view class="t t3">【新人专享】</view>
+              <view class="t t4">编号：1214234234</view>
+            </view>
+          </view>
+          <!-- 右侧 -->
+          <view class="float-li-rig">
+            <view class="coupon-rig">
+              <view  style="color:#fff" class="t1 t">满100减10</view>
+              <view  style="color:#fff" class="t2 t">失效日期</view>
+              <view  style="color:#fff" class="t2 t">2020.05.20 23:59:59</view>
+            </view>
+          </view>
+          <!-- 纹理样式  -->
+          <i></i>
+        </view>
+      </view>
+    </view>
+
+    <view  style='margin-top:66rpx;display: flex; flex-direction: column;align-items: center;' wx:if="{{couponList.length <1 }}">
+      <image style='width:300rpx;height:200rpx;' src='../../../img/no-coupon.png'></image>
+      <view style='color:#999;margin-top:16rpx'>暂无未使用优惠券</view>
+    </view>
+
+  </view>
+
+</view>

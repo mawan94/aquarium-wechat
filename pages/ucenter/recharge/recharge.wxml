@@ -1,0 +1,24 @@
+<view class='container'>
+  <!-- <view wx:if="{{!userInfo}}" style='margin-top:66rpx;display: flex; flex-direction: column;align-items: center;'>
+    <view style='color:#666'>您还没有登录，请登录后查看</view>
+    <view style='width:88%;margin-top:66rpx' bindtap='handleToLogin' class='login-btn'>立即登录</view>
+  </view> -->
+  <view wx:if="{{true}}" class='containerTop'>
+    <view class='top'>
+      <view class='top-left'></view>
+      <view class='top-right' bindtap='handleToIntroduction'>充值规则？</view>
+    </view>
+    <view class='select'>
+      <view wx:for="{{2}}" wx:key="index" bindtap='select' class="{{rechargeRuleId==item.rechargeRuleId?'selectItem2':'selectItem1'}}" data-current-item="{{item}}">
+        <view class='title'>
+          <text>100</text> 元</view>
+        <view class='giveNum'>descriptiondescription</view>
+      </view>
+
+    </view>
+  </view>
+  <view wx:if="true" class='bottom'>
+    <view class='recharge' bindtap='handlePayMoney'>充值</view>
+  </view>
+
+</view>

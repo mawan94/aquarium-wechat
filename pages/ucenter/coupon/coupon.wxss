@@ -1,0 +1,92 @@
+/* pages/my/coupon/coupon.wxss */page{
+  background: #f0f0f0;
+}
+.header{
+  width: 100%;
+  background: white;
+}
+.nav{
+  width: 33.3%;
+  height: 90rpx;
+  display: inline-block;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 90rpx;
+}
+.nav-select{
+   width: 33.3%;
+  height: 90rpx;
+  display: inline-block;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 90rpx;
+  border-bottom: 2px solid #38d160;
+  color: #38d160;
+}
+.content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  /* padding-top: 100rpx; */
+}
+.null-content-title{
+  box-sizing: border-box;
+  padding: 30rpx   60rpx;
+  font-size: 30rpx;
+}
+.login-btn{
+  font-size: 30rpx;
+  box-sizing: border-box;
+  padding:0 100rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: white;
+  border-radius: 100rpx;
+  text-align: center;
+  background: #38d160;
+  border: 1px solid #f0f0f0;
+}
+.login-btn:active{
+  background: #f0f0f0;
+}
+
+.coupon-list{width: 710rpx; margin:  0 auto}
+.coupon-list .item{width: 710rpx; height: 250rpx; margin-bottom: 20rpx;}
+.coupon-list .item .float-li{width: 450rpx; height: 100%; border-right: 2rpx dashed rgba(255,255,255,.3)}
+.coupon-list .item .float-li-rig{width: 220rpx; padding-right: 20rpx; height:100%; color: #fff; position: absolute;
+right: 0;
+top: 0;
+}
+
+
+.coupon-left{position: relative}
+.coupon-left .t{position: absolute; color: #fff}
+.coupon-left .t1{left: 15rpx; top: 110rpx}
+.coupon-left .t2{left: 40rpx; top: 50rpx; font-size: 80rpx; font-weight: bold }
+.coupon-left .t3{left: 220rpx; top: 50rpx; width: 200rpx; font-size: 30rpx;}
+.coupon-left .t4{left: 20rpx; top:180rpx}
+
+.coupon-rig .t{text-align: center;}
+.coupon-rig .t1{font-size: 40rpx; padding: 30rpx 0 10rpx 0;}
+.coupon-rig .t3{padding-top:20rpx}
+.coupon-rig .t3 text{background: #fff; color: #333; border-radius: 7rpx; padding: 10rpx 40rpx}
+
+
+.note{background: #faeab7}
+
+
+.stamp{width:700rpx; height: 250rpx;margin-bottom:50rpx;position:relative;overflow:hidden}
+.stamp i{position: absolute;left: 20%;top: 90rpx;height: 500rpx;width: 700rpx;background-color: rgba(255,255,255,.15);transform: rotate(-30deg);
+}
+.stamp01{background:radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 30rpx, #F39B00 30rpx);background-size:10rpx 10rpx;background-position:9rpx 3rpx; background: #F39B00}
+.stamp02{background:radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 30rpx, #D24161 30rpx);background-size:10rpx 10rpx;background-position:9rpx 3rpx; background: #D24161}
+.stamp03{background:radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 30rpx, #D24161 30rpx);background-size:10rpx 10rpx;background-position:9rpx 3rpx; background: #7EAB1E }
+.stamp04{background:radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 30rpx, #D24161 30rpx);background-size:10rpx 10rpx;background-position:9rpx 3rpx; background: #50ADD3 }
+.stamp05{background:radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 30rpx, #D24161 30rpx);background-size:10rpx 10rpx;background-position:9rpx 3rpx; background: #f0229b}
+.stamp05{background:radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 30rpx, #D24161 30rpx);background-size:10rpx 10rpx;background-position:9rpx 3rpx; background: #f0229b}
+/*  失效样式 */
+.stamp06{background:radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 30rpx, #e2e2e2 30rpx);background-size:10rpx 10rpx;background-position:9rpx 3rpx; background: #acacac
+}

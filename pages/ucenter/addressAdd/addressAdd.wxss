@@ -1,0 +1,72 @@
+/* pages/my/address/addressInfo/addressInfo.wxss */
+page{
+  background: #f0f0f0;
+  font-size: 30rpx;
+}
+.list{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: white;
+  box-sizing: border-box;
+  padding:20rpx  20rpx 0rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+.name{
+  font-weight: 600;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+  margin-bottom: 20rpx;
+}
+.input{
+
+  flex-grow: 2;
+  box-sizing: border-box;
+  padding: 20rpx 20rpx 40rpx;
+  font-size: 30rpx;line-height: 30rpx;
+  height: 90rpx;
+}
+.center{
+  justify-content: center
+}
+.around{
+  justify-content: space-around;
+}
+.circle{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  border: 1px solid #f0f0f0;
+  margin-right: 40rpx;
+}
+.circle-view{
+  display: flex;
+}
+.btn-list{
+  flex-grow: 2;
+  display: flex;
+  
+  justify-content: space-around;
+  padding-bottom: 20rpx;
+}
+.btn-list view{
+  color:#999;
+  border: 1px solid #999;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  padding: 4rpx 14rpx;
+}
+.add-btn{
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 6%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  background: #b4282d;
+  color: white;
+}
+.add-btn:active{
+  background: #cdcdcd;
+}

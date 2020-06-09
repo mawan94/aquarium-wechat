@@ -1,0 +1,54 @@
+<view class="container">
+  <view class='list' style='border:0;'>
+    <view class='name'>收货人</view>
+    <input value='{{receiveName}}' bindinput="handleChangeText" data-field='receiveName' placeholder='请填写收获姓名' class='input' style='border-bottom: 1px solid #f0f0f0;'></input>
+  </view>
+
+  <radio-group class='list around' style='padding:20rpx 40rpx;' bindchange="radioChange">
+    <label class="radio" wx:for="{{genderList}}">
+      <radio value=" {{item.value}}" checked="{{item.value == gender}}" /> {{item.name}}
+    </label>
+  </radio-group>
+
+  <view class='list' style='border-bottom: 20rpx solid #f0f0f0;'>
+    <view class='name'>联系电话</view>
+    <input value='{{receiveTel}}'  bindinput="handleChangeText" data-field='receiveTel' placeholder='请填写收货手机号' class='input'></input>
+  </view>
+
+  <view class='list'>
+    <view class='name'>选择城市</view>
+    <!-- <input placeholder='请输入您的收货城市' class='input'></input> -->
+    <!-- <picker mode="region" class='input' bindchange="bindPickerChange" value="{{index}}" range="{{cityList}}">
+      <view class="picker">
+       {{cityList[index]? cityList[index]:"请输入您的收货城市" }} 
+      </view>
+    </picker> -->
+
+    <picker class='input' mode="region" bindchange="bindRegionChange" value="{{region}}">
+    <view class="picker">
+      {{region[0]}} {{region[1]}} {{region[2]}}
+    </view>
+  </picker>
+
+    <view class='icon-arrow-left' style='margin-bottom:20rpx;'></view>
+  </view>
+
+  <view class='list'>
+    <view class='name'>收货地址</view>
+    <text class='input' catchtap='handleToAddressSelector'>{{address?address:"请输入您的收货地址"}}   </text>
+    <view class='icon-arrow-left' style='margin-bottom:20rpx;'></view>
+  </view>
+
+  <view class='list'>
+    <view class='name'>楼号门牌</view>
+    <input value='{{detailAddress}}' bindinput="handleChangeText" data-field='detailAddress' placeholder='楼号/单元/门牌号' class='input'></input>
+  </view>
+  <view class='list'>
+    <view class='name'>地址类型</view>
+    <view class='btn-list' wx:for="{{tagList}}">
+      <view style='{{item == tag?"background:#FFEBCD;color:#FF7F24;border:1px solid #FF7F24":"" }}' catchtap='handleClickTag' data-tag='{{item}}'>{{item}}</view>
+    </view>
+  </view>
+  <view class='add-btn' catchtap='handleSubmitForm'>保存地址</view>
+  <view style='color:#666;background:#f0f0f0;border:solid 1px #D9D9D9' wx:if="{{customerReceiveId}}" class='add-btn' catchtap='handleDelAddress'>删除地址</view>
+</view>

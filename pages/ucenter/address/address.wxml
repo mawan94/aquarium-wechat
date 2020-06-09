@@ -1,0 +1,23 @@
+<view class="container">
+    <view class="address-list" wx:if="{{ addressList.length > 0 }}">
+        <view class="item" wx:for="{{addressList}}" wx:key="{{item.id}}" bindtap="addressAddOrUpdate"  data-customer-receive-id="{{item.customerReceiveId}}">
+            <view class="l">
+                <view class="name">{{item.receiveName}}</view>
+                <!-- <view class="default" >{{item.tag}}</view> -->
+            </view>
+            <view class="c">
+                <view class="mobile">{{item.receiveTel}}</view>
+                <view class="address">{{item.address + item.detailAddress}}</view>
+            </view>
+            <view class="r">
+            <view class="default" >{{item.tag}}</view>
+                <!-- <image catchtap="deleteAddress" data-customer-receive-id="{{item.customerReceiveId}}" class="del" src="/static/images/del-address.png"></image> -->
+            </view>
+        </view>
+    </view>
+    <view class="empty-view" wx:if="{{ addressList.length <= 0 }}">
+      <image class="icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noAddress-26d570cefa.png"></image>
+      <text class="text">收货地址在哪里</text>
+    </view>
+    <view class="add-address" bindtap="addressAddOrUpdate" data-address-id="0">新建</view>
+</view>

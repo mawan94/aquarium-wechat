@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="container">
+<view class="recharge-header">
+  <view class="background"></view>
+  <view class="text-left">开具点击发票</view>
+  <view class="text-right">充值</view>
+  <view class="text-money">300元</view>
+</view>
+
+<view class="recharge-money">
+  <view class="money-list {{active === index?'activeindex':''}}" wx:for="{{data}}" wx:key="index" data-recharge-rule-id="{{item.rechargeRuleId}}"  data-index="{{index}}" bindtap="handleClickCard">
+    <view class="money">{{item.amount}}元</view>
+    <view class="give">{{item.description}}</view>
+  </view>
+
+  <view class="money-list {{show?'activeindex':''}}" bindtap="showmodel">
+    <view class="money">自定义金额</view>
+    <view class="give">
+    无赠送
+      <!-- <image src="../../images/index8.png"></image> -->
+    </view>
+  </view>
+</view>
+
+<view class="inputview" wx:if="{{show}}">
+  <view class="input">
+    <view class="writeinput">
+      <input bindinput="setVal"></input>
+    </view>
+    <view class="button {{num?'buttonActive':''}}" bindtap="handleRecharge">立即充值</view>
+  </view>
+</view>
+
+<!-- <view class="title">
+首充加赠
+</view>
+<view class="recharge-money topnull">
+  <view class="money-list {{showadd?'activeindex':''}}" bindtap="chooseAdd">
+    <view class="money">200元</view>
+    <view class="give">送15</view>
+  </view>
+</view> -->
+</view>
