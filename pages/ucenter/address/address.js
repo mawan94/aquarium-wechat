@@ -9,6 +9,10 @@ Page({
   },
   onLoad: function(options) {
     // 页面初始化 options为页面跳转所带来的参数
+    if(app.globalData.userInfo == null) {
+      app.userLogin()
+      return
+    }
     if (options.back) {
       this.setData({
         back: options.back

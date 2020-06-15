@@ -12,13 +12,12 @@ Page({
   onLoad: function (options) {
     this.getCatalog();
   },
-  getCatalog: function () {
 
+  getCatalog: function () {
     let that = this;
     wx.showLoading({
       title: '加载中...',
     });
-
     util.request(api.CategoriesParent).then(function (res) {
       if (res.data) {
         that.setData({
@@ -41,9 +40,10 @@ Page({
     let that = this;
     util.request(api.CategoriesChild, { id: id })
       .then(function (res) {
+
         that.setData({
           childList: res.data, 
-          currentSelectedParentCategory: that.data.parentList.filter(item => item.categoryId == id)[0]
+          currentSelectedParentCategory: that.data.parentList.length? that.data.parentList.filter(item => item.categoryId == id)[0]:[]
         });
       });
   },

@@ -1,5 +1,4 @@
 var api = require('../config/api.js')
-// const app = getApp()
 
 function formatTime(date) {
   var year = date.getFullYear()
@@ -23,9 +22,9 @@ function formatNumber(n) {
  * 封封微信的的request
  */
 function request(url, data = {}, method = "GET") {
-
   const app = getApp()
   let userInfo = app.globalData.userInfo
+  console.error(userInfo)
   return new Promise(function (resolve, reject) {
     wx.request({
       url: url,

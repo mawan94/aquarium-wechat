@@ -63,18 +63,19 @@
 
   <view class="goods-attr">
     <view class="t">商品参数</view>
-    <view class="l">
-      <view class="item" wx:for="{{attribute}}" wx:key="{{item.name}}">
+    <!-- <view class="l"> -->
+      <!-- <view class="item" wx:for="{{attribute}}" wx:key="{{item.name}}">
         <text class="left">{{item.name}}</text>
         <text class="right">{{item.value}}</text>
-      </view>
-    </view>
+      </view> -->
+    <!-- </view> -->
   </view>
 
-  <view class="detail">
-    <import src="../../lib/wxParse/wxParse.wxml" />
-    <template is="wxParse" data="{{wxParseData:goodsDetail.nodes}}" />
-  </view>
+  <!-- <view class="detail"> -->
+  <rich-text nodes="{{goods.mediaInformation}}" />
+    <!-- <import src="../../lib/wxParse/wxParse.wxml" />
+    <template is="wxParse" data="{{wxParseData:goodsDetail.nodes}}" /> -->
+  <!-- </view> -->
 
 
   <!-- <view class="common-problem">
@@ -127,7 +128,9 @@
     </view>
     <view class="spec-con">
       <view class="spec-item" wx:for="{{skuList}}" wx:key="{{item.skuId}}">
-        <view class="value {{item.skuId == currentSelectedSku.skuId? 'selected' : ''}}" bindtap="handleClickSku" data-item="{{item}}">{{item.skuName}}</view>
+        <view class="value {{item.skuId == currentSelectedSku.skuId? 'selected' : ''}}" bindtap="handleClickSku" data-item="{{item}}">
+        {{item.skuName}}
+        </view>
         <!-- <view class="values">
           <view class="value {{vitem.checked ? 'selected' : ''}}" bindtap="clickSkuValue" wx:for="{{item.valueList}}" wx:for-item="vitem" wx:key="{{vitem.id}}" data-value-id="{{vitem.id}}" data-name-id="{{vitem.specification_id}}">{{vitem.value}}</view>
         </view> -->

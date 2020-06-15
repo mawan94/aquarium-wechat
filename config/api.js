@@ -1,11 +1,11 @@
 // const ApiRootUrl = 'http://127.0.0.1:8778/';
-const ApiRootUrl = 'http://mawan.natapp1.cc/';
+const ApiRootUrl = 'https://www.jly2020.com/api/';
 
 module.exports = { 
-  fileRootUrl: 'http://file.ddminihome.com/',
+  fileRootUrl: 'http://file.jly2020.com/',
   UserInfoUpdate: ApiRootUrl + 'customer/v1/save-or-update',
   Code2Session: ApiRootUrl + 'wechat/v1/login', //首页数据接口
-
+  
   IndexUrl: ApiRootUrl + 'index/index', //首页数据接口
   CatalogList: ApiRootUrl + 'catalog/index',  //分类目录全部分类数据接口
   CatalogCurrent: ApiRootUrl + 'catalog/current',  //分类目录当前分类数据接口

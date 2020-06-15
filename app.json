@@ -1,9 +1,12 @@
 {
   "pages": [
+    "pages/catalog/catalog",
+    
     "pages/recharge/recharge",
     
+    
+    
     "pages/ucenter/recharge/recharge",
-    "pages/catalog/catalog",
     
     "pages/shopping/checkout/checkout",
     
